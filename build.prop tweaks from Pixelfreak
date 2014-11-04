@@ -67,19 +67,19 @@ dalvik.vm.dexopt-flags=m=y
 # BACKGROUND APPS LIMIT
 ro.sys.fw.bg_apps_limit=12
 
-# SOUNDS
+# SOUNDS set default sounds
 ro.config.ringtone=Callisto.ogg
 ro.config.notification_sound=Tethys.ogg
 ro.config.alarm_alert=Helium.ogg
 
-# DATEFORMAT
+# DATE FORMAT
 ro.com.android.dateformat=MM-dd-yyyy
 
 # SETUPWIZZARD ON
 ro.setupwizard.enterprise_mode=1
 
 # PERMANENT DISABLE OF HW / must test
-# debug.enabletr=false
+debug.enabletr=false
 
 # IMPROVE SCREEN QUALITY AT THE COST OF PERFORMANCE
 persist.sys.use.dithering=1
@@ -113,13 +113,13 @@ ring.delay=0
 # DISPLAY
 debug.egl.hw=1
 
-# WEBVIEW / is only for 2.x kernel and this fix blackscreen in google apps
-#persist.webview.provider=classic
+# WEBVIEW only for 2.x kernel and this fix blackscreen in google apps, needs patched webkit too
+persist.webview.provider=classic
 
 # VSYNC
 debug.sf.no_hw_vsync=1
 
-# ADB FIX IF IS NOT IN KERNEL FIXED
+# ADB FIX only for maniacx based 3.0.x kernel
 ro.serialno=0123456789ABCDEF
 
 # DIAL-UP-NETWORK / DUN 
@@ -127,3 +127,36 @@ persist.sys.dun.override=0
 
 # MULTI-CORE DEX OPT DISABLED
 persist.sys.dalvik.multithread=false
+
+# COMPOSITION
+debug.composition.type=mdp
+
+# DALVIC VIRTUAL MACHINE TWEAKS
+dalvik.vm.lockprof.threshold=500
+dalvik.vm.checkjni=0
+dalvik.vm.heapsize=128m
+dalvik.vm.heapgrowthlimit=48m
+dalvik.vm.heapstartsize=5m
+dalvik.vm.dexopt-data-only=1
+dalvik.vm.verify-bytecode=false
+dalvik.vm.heaptargetutilization=0.25
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapmaxfree=2m
+dalvik.vm.jit.codecachesize=0
+dalvik.vm.execution-mode=int:jit
+dalvik.vm.debug.alloc=0
+
+# USB
+ro.vold.umsdirtyratio=20
+persist.sys.usb.config=mass_storage,adb
+
+# DENSITY set default density (LEO default 240)
+ro.sf.lcd_density=200
+
+# MEDIA
+media.a1026.nsForVoiceRec=0
+media.a1026.enableA1026=0
+rw.media.record.hasb=0
+
+# CAMCORDER
+debug.camcorder.disablemeta=1
