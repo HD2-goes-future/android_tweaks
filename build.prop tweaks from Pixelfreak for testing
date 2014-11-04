@@ -1,6 +1,8 @@
-# LOWMWM DEVICE 512 MB / must test KSM
+# LOWMWM DEVICE 512 MB
 ro.config.low_ram=true
-#ro.ksm.default=1
+
+# Enable ksm by default
+ro.ksm.default=1
 
 # TRANSPARENCY for Statusbar on kitkat
 persist.sys.force_highendgfx=true
@@ -38,7 +40,7 @@ ro.zygote.disable_gl_preload=true
 # SYSTEM ROOT
 persist.sys.root_access=1
 
-# SELINUX
+# SELINUX disabled by default
 ro.build.selinux=0
 
 # RENDER UI WITH GPU
@@ -57,9 +59,9 @@ ro.media.dec.jpeg.memcap=20000000
 # DISABLE ERROR CHECKING
 ro.kernel.android.checkjni=0
 
-# MAKES APPS LOAD FASTER AND FREES MORE RAM / must test what is better
-#dalvik.vm.dexopt-flags=v=a,o=v,m=y,u=y
-#dalvik.vm.dexopt-flags m=y,o=v,u=y
+# MAKES APPS LOAD FASTER AND FREES MORE RAM / use only one of them
+dalvik.vm.dexopt-flags=v=a,o=v,m=y,u=y
+dalvik.vm.dexopt-flags m=y,o=v,u=y
 dalvik.vm.dexopt-flags=m=y
 
 # BACKGROUND APPS LIMIT
