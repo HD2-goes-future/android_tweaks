@@ -131,3 +131,9 @@ persist.sys.dun.override=0
 
 # MULTI-CORE DEX OPT DISABLED
 persist.sys.dalvik.multithread=false
+
+# GOOGLE DNS
+net.ppp0.dns1=8.8.8.8
+net.ppp0.dns2=8.8.4.4
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
